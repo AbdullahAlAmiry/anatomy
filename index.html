@@ -1,199 +1,559 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>General Veterinary Anatomy – Question Bank</title><style>
-body{font-family:system-ui,"Segoe UI",Tahoma,sans-serif;max-width:820px;margin:auto;padding:14px;background:#f5f7fa;color:#1d2733}
-h1{font-size:20px;margin:6px 0}h2{background:#1f4e79;color:#fff;padding:8px 12px;border-radius:8px;margin-top:26px;font-size:16px}
-.note{direction:rtl;text-align:right;background:#fff7e0;border-right:4px solid #e0a800;padding:8px 12px;border-radius:6px;margin:8px 0;font-size:14px}
-.q{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:12px;margin:12px 0}
-.en{font-weight:600}.ar{direction:rtl;text-align:right;color:#4a5a6a;margin:4px 0 8px}
-label.o{display:block;padding:8px 10px;margin:5px 0;border:1px solid #ccd5df;border-radius:8px;cursor:pointer}
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>General Veterinary Anatomy – Question Bank</title>
+<style>
+body{font-family:system-ui,"Segoe UI",Tahoma,sans-serif;max-width:850px;margin:auto;padding:14px;background:#f5f7fa;color:#1d2733;direction:rtl;text-align:right}
+h1{font-size:20px;margin:6px 0;text-align:center;color:#1f4e79}
+h2{background:#1f4e79;color:#fff;padding:10px 14px;border-radius:8px;margin-top:26px;font-size:16px}
+.note{background:#fff7e0;border-right:4px solid #e0a800;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px;line-height:1.5}
+.q{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:14px;margin:12px 0;box-shadow:0 2px 6px rgba(0,0,0,0.03)}
+.en{font-weight:600;direction:ltr;text-align:left;color:#1a252f;font-size:15px;margin-bottom:4px}
+.ar{color:#34495e;margin:4px 0 10px;font-size:15px;font-weight:500}
+label.o{display:block;padding:10px 12px;margin:6px 0;border:1px solid #ccd5df;border-radius:8px;cursor:pointer;transition:background 0.2s}
 label.o:hover{background:#eef3f8}
-.ok{background:#d4f4dd!important;border-color:#2e9e4f!important}.no{background:#fbd5d5!important;border-color:#d03a3a!important}
-.fb{display:none;direction:rtl;text-align:right;margin-top:8px;padding:8px 10px;border-radius:8px;background:#eef3f8;font-size:14px;line-height:1.6}
-.q.done .fb{display:block}.tf{display:flex;gap:10px}.tf label.o{flex:1;text-align:center}
-#score{position:sticky;top:0;background:#1f4e79;color:#fff;padding:6px 12px;border-radius:8px;text-align:center;z-index:5}
-</style></head><body>
-<h1>General Veterinary Anatomy – Question Bank</h1><div id="score"></div><div id="app"></div>
+.opt-en{direction:ltr;text-align:left;font-weight:600;color:#2c3e50}
+.opt-ar{font-size:13.5px;color:#6c757d;margin-top:2px}
+.ok{background:#d4f4dd!important;border-color:#2e9e4f!important;color:#155724!important}
+.no{background:#fbd5d5!important;border-color:#d03a3a!important;color:#721c24!important}
+.fb{display:none;margin-top:10px;padding:10px 12px;border-radius:8px;background:#eef7fe;font-size:14px;line-height:1.6;border-right:4px solid #3498db}
+.q.done .fb{display:block}
+.tf{display:flex;gap:12px;margin-top:8px}
+.tf label.o{flex:1;text-align:center}
+#score{position:sticky;top:10px;background:#1f4e79;color:#fff;padding:8px 16px;border-radius:8px;text-align:center;z-index:5;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.15)}
+</style>
+</head>
+<body>
+<h1>General Veterinary Anatomy – Question Bank</h1>
+<div id="score"></div>
+<div id="app"></div>
+
 <script>
 const MCQ=[
-["Which branch of anatomy deals with the study of the development of organisms?","أي فرع من التشريح يختص بدراسة تطور الكائنات؟",["Histology","Macroscopic anatomy","Embryology","Regional anatomy"],2,"علم الأجنة (Embryology): يدرس نمو وتطور الكائن. الأنسجة = Histology، والتشريح العياني = بالعين المجردة."],
-["Studying the topography and relations of body parts in a particular area, such as the shoulder or flank region, is called:","دراسة التضاريس والعلاقات بين أجزاء الجسم في منطقة معينة مثل الكتف أو الخاصرة تسمى:",["Regional anatomy","Systematic anatomy","Applied anatomy","Microscopic anatomy"],0,"التشريح الإقليمي: يدرس كل ما في منطقة واحدة معاً، بعكس الجهازي الذي يدرس جهازاً كاملاً."],
-["Which plane divides the trunk into equal right and left halves?","أي مستوى يقسم الجذع إلى نصفين أيمن وأيسر متساويين؟",["Transverse plane","Dorsal plane","Paramedian plane","Median plane"],3,"المستوى الناصف (Median) يمر في خط المنتصف، أما الـ Paramedian فموازٍ له لكنه بعيد عن المنتصف."],
-["The dorsal (horizontal) plane of the trunk divides it into:","المستوى الظهري (الأفقي) للجذع يقسمه إلى:",["Cranial and caudal segments","Dorsal and ventral segments","Proximal and distal segments","Right and left halves"],1,"المستوى الظهري أفقي فيفصل الجزء الظهري عن البطني. القسمة إلى أمامي وخلفي = المستوى المستعرض."],
-["Which term is used instead of \"cranial\" in the manus and in the pes regions?","ما المصطلح الذي يُستخدم بدلاً من \"cranial\" في منطقتي اليد (manus) والقدم (pes)؟",["Rostral","Palmar","Dorsal","Plantar"],2,"في manus وpes يُستبدل cranial بـ Dorsal، بينما Palmar/Plantar تحل محل caudal."],
-["In the head, the term \"aboral\" means:","في الرأس، مصطلح \"aboral\" يعني:",["Away from the mouth","Toward the mouth","Toward the nose","Toward the back"],0,"Aboral = بعيداً عن الفم (ab = بعيد عن). عكسه Oral = ناحية الفم."],
-["Which animals have two digits touching the ground (digits 3 and 4)?","أي الحيوانات لها أصبعان يلامسان الأرض (الأصبعان 3 و4)؟",["Dog and cat","Rhinoceros","Horse","Ruminants"],3,"المجترات تمشي على الأصبعين 3 و4 (حافر مشقوق). الفرس أصبع واحد، والكلب والقط أصابع كثيرة."],
-["The term \"parietal\" refers to:","مصطلح \"parietal\" يشير إلى:",["The organ inside a cavity","The body wall or the wall of a cavity","The part of the body other than the viscera","The part nearest to the surface"],1,"Parietal = جدار الجسم أو جدار التجويف، أما العضو داخل التجويف فيسمى Visceral."],
-["Osteology is the science which deals with the:","علم الـ Osteology هو العلم الذي يختص بدراسة:",["Muscles","Joints","Bones","Ligaments"],2,"Osteo = عظم، فـ Osteology = علم العظام. العضلات Myology والمفاصل Arthrology."],
-["The skeleton is a framework of hard structures made of:","الهيكل العظمي إطار من تراكيب صلبة يتكون من:",["Bones and cartilages","Bones and ligaments","Bones and tendons","Cartilages and muscles"],0,"الهيكل يتكون من العظام والغضاريف (وليس الأربطة أو الأوتار)."]];
+["Which branch of anatomy deals with the study of the development of organisms?","أي فرع من التشريح يختص بدراسة تطور الكائنات؟",
+ [["Histology","علم الأنسجة"],["Macroscopic anatomy","التشريح العياني المجرد"],["Embryology","علم الأجنة"],["Regional anatomy","التشريح الإقليمي"]],2,"علم الأجنة (Embryology): يدرس نمو وتطور الكائن. الأنسجة = Histology، والتشريح العياني = بالعين المجردة."],
+
+["Studying the topography and relations of body parts in a particular area, such as the shoulder or flank region, is called:","دراسة التضاريس والعلاقات بين أجزاء الجسم في منطقة معينة مثل الكتف أو الخاصرة تسمى:",
+ [["Regional anatomy","التشريح الإقليمي"],["Systematic anatomy","التشريح الجهازي"],["Applied anatomy","التشريح التطبيقي"],["Microscopic anatomy","التشريح المجهري"]],0,"التشريح الإقليمي: يدرس كل ما في منطقة واحدة معاً، بعكس الجهازي الذي يدرس جهازاً كاملاً."],
+
+["Which plane divides the trunk into equal right and left halves?","أي مستوى يقسم الجذع إلى نصفين أيمن وأيسر متساويين؟",
+ [["Transverse plane","المستوى المستعرض"],["Dorsal plane","المستوى الظهري"],["Paramedian plane","المستوى شبه المنصف"],["Median plane","المستوى المنصف (الوسطي)"]],3,"المستوى الناصف (Median) يمر في خط المنتصف، أما الـ Paramedian فموازٍ له لكنه بعيد عن المنتصف."],
+
+["The dorsal (horizontal) plane of the trunk divides it into:","المستوى الظهري (الأفقي) للجذع يقسمه إلى:",
+ [["Cranial and caudal segments","أجزاء أمامية وخلفية"],["Dorsal and ventral segments","أجزاء ظهرية وبطنية"],["Proximal and distal segments","أجزاء قريبة وبعيدة"],["Right and left halves","نصفين أيمن وأيسر"]],1,"المستوى الظهري أفقي فيفصل الجزء الظهري عن البطني. القسمة إلى أمامي وخلفي = المستوى المستعرض."],
+
+["Which term is used instead of \"cranial\" in the manus and in the pes regions?","ما المصطلح الذي يُستخدم بدلاً من \"cranial\" في منطقتي اليد (manus) والقدم (pes)؟",
+ [["Rostral","خطمي (ناحية الأنف)"],["Palmar","راحِيّ (بطن اليد)"],["Dorsal","ظهري"],["Plantar","أخمصي (بطن القدم)"]],2,"في manus وpes يُستبدل cranial بـ Dorsal، بينما Palmar/Plantar تحل محل caudal."],
+
+["In the head, the term \"aboral\" means:","في الرأس، مصطلح \"aboral\" يعني:",
+ [["Away from the mouth","بعيداً عن الفم"],["Toward the mouth","باتجاه الفم"],["Toward the nose","باتجاه الأنف"],["Toward the back","باتجاه الظهر"]],0,"Aboral = بعيداً عن الفم (ab = بعيد عن). عكسه Oral = ناحية الفم."],
+
+["Which animals have two digits touching the ground (digits 3 and 4)?","أي الحيوانات لها أصبعان يلامسان الأرض (الأصبعان 3 و4)؟",
+ [["Dog and cat","الكلب والقط"],["Rhinoceros","وحيد القرن"],["Horse","الحصان"],["Ruminants","المجترات"]],3,"المجترات تمشي على الأصبعين 3 و4 (حافر مشقوق). الفرس أصبع واحد، والكلب والقط أصابع كثيرة."],
+
+["The term \"parietal\" refers to:","مصطلح \"parietal\" يشير إلى:",
+ [["The organ inside a cavity","العضو داخل التجويف"],["The body wall or the wall of a cavity","جدار الجسم أو جدار التجويف"],["The part of the body other than the viscera","جزء الجسم بخلاف الأحشاء"],["The part nearest to the surface","الجزء الأقرب للسطح"]],1,"Parietal = جدار الجسم أو جدار التجويف، أما العضو داخل التجويف فيسمى Visceral."],
+
+["Osteology is the science which deals with the:","علم الـ Osteology هو العلم الذي يختص بدراسة:",
+ [["Muscles","العضلات"],["Joints","المفاصل"],["Bones","العظام"],["Ligaments","الأربطة"]],2,"Osteo = عظم، فـ Osteology = علم العظام. العضلات Myology والمفاصل Arthrology."],
+
+["The skeleton is a framework of hard structures made of:","الهيكل العظمي إطار من تراكيب صلبة يتكون من:",
+ [["Bones and cartilages","العظام والغضاريف"],["Bones and ligaments","العظام والأربطة"],["Bones and tendons","العظام والأوتار"],["Cartilages and muscles","الغضاريف والعضلات"]],0,"الهيكل يتكون من العظام والغضاريف (وليس الأربطة أو الأوتار)."],
+
+["The exoskeleton originates from which embryonic layer?","الهيكل الخارجي ينشأ من أي طبقة جنينية؟",
+ [["Mesoderm","الأديم المتوسط"],["Endoderm","الأديم الداخلي"],["Neural crest","العرف العصبي"],["Ectoderm","الأديم الظاهر"]],3,"الأديم الظاهر (Ectoderm): ينتج الحوافر والقرون والجلد."],
+
+["Which of the following is an example of an exoskeleton?","أي مما يلي مثال على الهيكل الخارجي؟",
+ [["Scapula","عظم الكتف"],["Femur","عظم الفخذ"],["Ribs","الأضلاع"],["Hoofs of animals","حوافر الحيوانات"]],3,"حوافر الحيوانات؛ باقي الخيارات عظام داخلية."],
+
+["The scapula, femur, humerus and ribs of higher vertebrates are examples of:","اللوح والفخذ والعضد والأضلاع في الفقاريات العليا أمثلة على:",
+ [["Exoskeleton","هيكل خارجي"],["Endoskeleton","هيكل داخلي"],["Splanchnic skeleton","هيكل حشوي"],["Membranous skeleton","هيكل غشائي"]],1,"الهيكل الداخلي (Endoskeleton): داخل الجسم ومن الميزودرم."],
+
+["The axial skeleton comprises:","الهيكل المحوري يشمل:",
+ [["The skull, vertebral column, ribs and sternum","الجمجمة والعمود الفقري والأضلاع والقص"],["The bones of the thoracic and pelvic limbs","عظام الطرفين الصدري والحوضي"],["The os penis and os cordis","عظم القضيب وعظم القلب"],["The skull and limb bones","الجمجمة وعظام الأطراف"]],0,"الجمجمة والعمود الفقري والأضلاع والقص."],
+
+["The appendicular skeleton includes:","الهيكل الطرفي يشمل:",
+ [["The skull and sternum","الجمجمة والقص"],["The vertebral column and ribs","العمود الفقري والأضلاع"],["Bones developed in viscera","عظام تتكون في الأحشاء"],["The bones of the thoracic and pelvic limbs","عظام الطرفين الصدري والحوضي"]],3,"عظام الطرفين الصدري والحوضي."],
+
+["The os cordis is found in the heart of:","عظمة القلب (os cordis) توجد في قلب:",
+ [["Dog","الكلب"],["Camel","الجمل"],["Ruminants","المجترات"],["Horse","الحصان"]],2,"المجترات (كالبقر)."],
+
+["The ossa diaphragmatica are found in the diaphragm of the:","العظيمات الحجابية توجد في حجاب:",
+ [["Camel","الجمل"],["Dog","الكلب"],["Cow","البقرة"],["Horse","الحصان"]],0,"الجمل."],
+
+["In the phylogenic classification, the skeleton of cartilaginous fishes is the:","في التصنيف التطوري، هيكل الأسماك الغضروفية هو:",
+ [["Membranous skeleton","الهيكل الغشائي"],["Cartilaginous skeleton","الهيكل الغضروفي"],["Bony skeleton","الهيكل العظمي"],["Exoskeleton","الهيكل الخارجي"]],1,"الهيكل الغضروفي."],
+
+["Which of the following is NOT a function of bones?","أي مما يلي ليس من وظائف العظام؟",
+ [["Storage of minerals","تخزين المعادن"],["Blood cell formation","تكوين خلايا الدم"],["Leverage (force of motion)","الروافع (قوة الحركة)"],["Digestion of food","هضم الطعام"]],3,"الهضم ليس وظيفة عظمية."],
+
+["Blood cell formation takes place in the:","تكوين خلايا الدم يحدث في:",
+ [["Yellow marrow","النخاع الأصفر"],["Gelatinous marrow","النخاع الهلامي"],["Red marrow","النخاع الأحمر"],["Periosteum","السمحاق"]],2,"النخاع الأحمر؛ الأصفر دهني والهلامي متحلل."],
+
+["Axial bones are classified according to their situation as:","تُصنَّف العظام المحورية حسب موقعها إلى:",
+ [["Paired bones away from the median plane","عظام مزدوجة بعيداً عن المستوى الناصف"],["Bones within the soft tissues","عظام داخل الأنسجة الرخوة"],["Bones of the limbs","عظام الأطراف"],["Unpaired bones present in the median plane","عظام فردية توجد في المستوى الناصف"]],3,"عظام فردية في المستوى الناصف."],
+
+["Endochondral bones develop from:","العظام الغضروفية المنشأ تتكون من:",
+ [["Fibrous membranes","أغشية ليفية"],["Hyaline cartilage","غضروف زجاجي"],["Elastic cartilage","غضروف مرن"],["The periosteum","السمحاق"]],1,"الغضروف الزجاجي؛ الأغشية الليفية للعظام الغشائية."],
+
+["Which of the following develops as an intramembranous bone?","أي مما يلي يتكون كعظم غشائي المنشأ؟",
+ [["Femur","الفخذ"],["Humerus","العضد"],["Phalanges","السلاميات"],["Some bones of the skull","بعض عظام الجمجمة"]],3,"بعض عظام الجمجمة."],
+
+["The shaft of a long tubular bone is called the:","جسم العظم الأنبوبي الطويل يسمى:",
+ [["Epiphysis","المشاشة (النهاية)"],["Metaphysis","التحام المشاشة"],["Diaphysis","جسم العظم (Diaphysis)"],["Physis","صفيحة النمو"]],2,"Diaphysis؛ الأطراف Epiphysis."],
+
+["The epiphysial plate (growth plate) is located in the:","صفيحة النمو توجد في:",
+ [["Diaphysis","جسم العظم"],["Metaphysis","منطقة التحام المشاشة (Metaphysis)"],["Epiphysis","نهاية العظم"],["Periosteum","السمحاق"]],1,"الـ Metaphysis بين الجسم والنهاية."],
+
+["Which of the following is a reduced long tubular bone of the horse?","أي مما يلي عظم أنبوبي طويل مختزل في الحصان؟",
+ [["Femur","الفخذ"],["Humerus","العضد"],["Phalanx","السلامى"],["Fibula","الشظية"]],3,"الشظية (Fibula)."],
+
+["Which bones diffuse and reduce concussion?","أي العظام توزع وتخفف الصدمات؟",
+ [["Flat bones","العظام المسطحة"],["Short bones","العظام القصيرة"],["Irregular bones","العظام غير المنتظمة"],["Pneumatic bones","العظام الهوائية"]],1,"العظام القصيرة."],
+
+["The largest sesamoid bone is the:","أكبر عظم سمسمي هو:",
+ [["Navicular bone","العظم القاربي"],["Proximal sesamoid bone","العظم السمسمي القريب"],["Coffin bone","عظم الحافر"],["Patella","الرضفة (الصابونة)"]],3,"الرضفة (Patella)."],
+
+["Pneumatic bones contain:","العظام الهوائية تحتوي على:",
+ [["Red marrow","نخاع أحمر"],["Yellow marrow","نخاع أصفر"],["Air spaces (sinuses) instead of marrow","جيوب هوائية بدلاً من النخاع"],["Gelatinous marrow","نخاع هلامي"]],2,"جيوب هوائية بدل النخاع."],
+
+["The small amount of spongy bone between the two compact layers of the flat bones of the skull cranium is termed:","كمية العظم الإسفنجي بين طبقتي المصمت في عظام الجمجمة المسطحة تسمى:",
+ [["Trabeculae","العوارض العظمية"],["Diploe","الدبلوي (Diploe)"],["Cortex","القشرة"],["Endosteum","بطانة العظم"]],1,"الـ Diploe."],
+
+["The periosteum is attached to the bone by connective tissue fibers called:","يرتبط السمحاق بالعظم بألياف تسمى:",
+ [["Haversian fibers","ألياف هافرس"],["Collagen fibers","ألياف الكولاجين"],["Sharpey's fibers","ألياف شاربي"],["Elastic fibers","ألياف مرنة"]],2,"ألياف شاربي."],
+
+["Which artery enters a long bone at the nutrient foramen and ramifies in the marrow?","أي شريان يدخل العظم الطويل عند الثقبة المغذية ويتفرع في النخاع؟",
+ [["Periosteal artery","شريان سمحاقي"],["Epiphysial artery","شريان مشاشي"],["Metaphysial artery","شريان الكفاف"],["Nutrient (medullary) artery","الشريان المغذي (النخاعي)"]],3,"الشريان المغذي (النخاعي)."],
+
+["The inorganic matter represents what percentage of the solid materials of bone?","المادة غير العضوية تمثل أي نسبة من المواد الصلبة للعظم؟",
+ [["35%","35%"],["5%","5%"],["65%","65%"],["95%","95%"]],2,"حوالي 65% (والعضوية 35%)."],
+
+["Arthrology is the science that deals with the study of:","علم الـ Arthrology يختص بدراسة:",
+ [["Muscles","العضلات"],["Joints","المفاصل"],["Nerves","الأعصاب"],["Blood vessels","الأوعية الدموية"]],1,"المفاصل."],
+
+["Syndesmology is the study of:","علم الـ Syndesmology هو دراسة:",
+ [["Ligaments and the joints they help form","الأربطة والمفاصل التي تشارك في تكوينها"],["Bone growth","نمو العظام"],["Teeth","الأسنان"],["Cartilage cells only","خلايا الغضاريف فقط"]],0,"الأربطة والمفاصل التي تشارك في تكوينها."],
+
+["Which joint is classified as cochlear (uniaxial, flexion and extension)?","أي مفصل يُصنف كمفصل حلزوني (محور واحد: ثني وبسط)؟",
+ [["Shoulder","الكتف"],["Radio-carpal","الكعبري الرسغي"],["Tibio-tarsal","الظنبوبي الكاحلي"],["Atlanto-axial","الأطلسي المحوري"]],2,"المفصل الظنبوبي الكاحلي (Tibio-tarsal)."],
+
+["Synosteosis means a:","كلمة Synosteosis تعني مفصلاً:",
+ [["Fibrous joint","مفصلاً ليفياً"],["Bony joint","مفصلاً عظمياً"],["Cartilaginous joint","مفصلاً غضروفياً"],["Synovial joint","مفصلاً زلالياً"]],1,"عظمياً (تحول المفصل إلى عظم)."],
+
+["Synsarcosis is the connection between the shoulder girdle and the head, neck and trunk by:","الـ Synsarcosis هو ارتباط الحزام الكتفي بالرأس والرقبة والجذع عن طريق:",
+ [["Ligaments","الأربطة"],["Cartilage","الغضاريف"],["Muscles","العضلات"],["Bone","العظام"]],2,"العضلات."],
+
+["The metacarpophalangeal joint of the horse is commonly called the:","المفصل المشطي السلامي في الحصان يسمى شائعاً:",
+ [["Fetlock","الـ Fetlock (عقب الحافر)"],["Pastern","الـ Pastern (الرسغ)"],["Coffin","الـ Coffin (عظم الحافر)"],["Elbow","الكوع"]],0,"الـ Fetlock (عقب الحافر)."],
+
+["The distal interphalangeal joint of the horse is commonly called the:","المفصل السلامي البعيد في الحصان يسمى شائعاً:",
+ [["Fetlock","الـ Fetlock"],["Pastern","الـ Pastern"],["Coffin","الـ Coffin joint"],["Knuckle","المفصل العقدي"]],2,"الـ Coffin joint."],
+
+["The femoro-tibial joint is an example of which type of synovial joint?","المفصل الفخذي الظنبوبي مثال على أي نوع من المفاصل الزلالية؟",
+ [["Hinge","مفصلي (رزّي)"],["Condyloid","لقمي (Condyloid)"],["Pivot","محوري"],["Plane","مسطح"]],1,"مفصل لقمي (Condyloid) وهو عدم تطابق يحتاج غضاريف هلالية."],
+
+["The uniting medium of fibrous joints is:","الوسط الرابط في المفاصل الليفية هو:",
+ [["Hyaline cartilage","غضروف زجاجي"],["Fibrocartilage","غضروف ليفي"],["Fibrous connective tissue","نسيج ضام ليفي"],["Joint capsule","محفظة المفصل"]],2,"نسيج ضام ليفي."],
+
+["Sutures are found mostly in the:","الدروز توجد غالباً في:",
+ [["Limbs","الأطراف"],["Vertebral column","العمود الفقري"],["Thorax","الصدر"],["Skull","الجمجمة"]],3,"الجمجمة."],
+
+["The interfrontal suture is an example of which suture type?","الدرز بين الجبهيتين نوعه:",
+ [["Serrated","مسنن (Serrated)"],["Squamous","حرشفي"],["Plane","مستوٍ"],["Foliate","ورقي"]],0,"مسنن (Serrated)."],
+
+["The suture between the temporal and parietal bones is:","الدرز بين الصدغية والجدارية:",
+ [["Serrated","مسنن"],["Squamous","حرشفي (Squamous)"],["Plane","مستوٍ"],["Foliate","ورقي"]],1,"حرشفي (Squamous)."],
+
+["The internasal suture is of which type?","الدرز بين الأنفيتين نوعه:",
+ [["Serrated","مسنن"],["Squamous","حرشفي"],["Plane","مستوٍ (Plane)"],["Foliate","ورقي"]],2,"مستوٍ (Plane)."],
+
+["The suture between the presphenoid wing and the frontal bone is:","الدرز بين جناح الوتدي الأمامي والجبهية:",
+ [["Serrated","مسنن"],["Squamous","حرشفي"],["Plane","مستوٍ"],["Foliate","ورقي (Foliate)"]],3,"ورقي (Foliate)."],
+
+["An example of syndesmosis is the joint between:","مثال على الـ Syndesmosis هو المفصل بين:",
+ [["Radius and ulna","الكعبرة والزند"],["Femur and tibia","الفخذ والظنبوب"],["Scapula and humerus","الكتف والعضد"],["Two vertebral bodies","جسمي فقرتين"]],0,"الكعبرة والزند بنسيج ليفي."],
+
+["Gomphosis is the implantation of teeth into alveoli by:","الـ Gomphosis هو غرز الأسنان في الحويصلات بواسطة:",
+ [["Hyaline cartilage","غضروف زجاجي"],["Periodontal membrane","الغشاء حول السني"],["Synovial membrane","غشاء زلالي"],["Interosseous membrane","غشاء بين العظام"]],1,"الغشاء حول السني."],
+
+["Hyaline cartilaginous joints are also called:","المفاصل الغضروفية الزجاجية تسمى أيضاً:",
+ [["Symphysis","الارتفاق"],["Syndesmosis","مفصل ليفي"],["Synchondrosis (primary cartilaginous)","Synchondrosis (غضروفية أولية)"],["Gomphosis","غرز سني"]],2,"Synchondrosis (غضروفية أولية)."],
+
+["The uniting medium of a symphysis is:","الوسط الرابط في الـ Symphysis:",
+ [["Hyaline cartilage","غضروف زجاجي"],["Fibrous tissue","نسيج ليفي"],["Bone","عظم"],["Fibrocartilage","غضروف ليفي"]],3,"الغضروف الليفي."],
+
+["Which of the following is an example of a synchondrosis?","أي مما يلي مثال على Synchondrosis؟",
+ [["Pelvic symphysis","ارتفاق الحوض"],["Epiphyseal plate","صفيحة النمو (Epiphyseal plate)"],["Intervertebral disc","القرص بين الفقرات"],["Mandibular symphysis","ارتفاق الفك السفلي"]],1,"صفيحة النمو."],
+
+["Which of the following is a symphysis?","أي مما يلي Symphysis؟",
+ [["Costochondral junction","التقاء الضلع بالغضروف"],["Epiphyseal plate","صفيحة النمو"],["Pelvic symphysis","ارتفاق الحوض"],["Suture of the skull","درز الجمجمة"]],2,"ارتفاق الحوض."],
+
+["Articular cartilage is:","الغضروف المفصلي:",
+ [["Highly vascular","غني بالأوعية"],["Supplied by nerves","مزود بالأعصاب"],["Covered by periosteum","مغطى بالسمحاق"],["Avascular with no nerve supply","عديم الأوعية والأعصاب"]],3,"عديم الأوعية والأعصاب."],
+
+["The main source of nutrition for articular cartilage is:","المصدر الرئيسي لتغذية الغضروف المفصلي:",
+ [["Synovial fluid","السائل الزلالي"],["Periosteum","السمحاق"],["Nutrient artery","الشريان المغذي"],["Joint capsule","محفظة المفصل"]],0,"السائل الزلالي."],
+
+["On a convex articular surface, the articular cartilage is thickest:","على السطح المفصلي المحدب يكون الغضروف أسمك:",
+ [["At the periphery","عند الحافة"],["At the centre","في المركز"],["Uniformly","بشكل متساوٍ"],["At the synovial fossa","عند الحفرة الزلالية"]],1,"في المركز (وفي المقعر عند الحافة)."],
+
+["The fibrous layer of the joint capsule is made of:","الطبقة الليفية لمحفظة المفصل مكونة من:",
+ [["Epithelial cells","خلايا طلائية"],["Collagen fibers with few elastic fibers","ألياف كولاجين مع قليل من المرنة"],["Hyaline cartilage","غضروف زجاجي"],["Elastic fibers only","ألياف مرنة فقط"]],1,"ألياف كولاجين مع قليل من المرنة."],
+
+["The synovial membrane is:","الغشاء الزلالي:",
+ [["A thick layer of collagen","طبقة سميكة من الكولاجين"],["Thin single epithelial layer lining the joint cavity except at the articular cartilages","طبقة طلائية رقيقة تبطن التجويف عدا الغضاريف"],["Covering the articular cartilage","يغطي الغضروف المفصلي"],["Devoid of blood vessels","خالٍ من الأوعية الدموية"]],1,"طبقة طلائية رقيقة تبطن التجويف عدا الغضاريف."],
+
+["An example of intra-capsular ligaments is:","مثال على الأربطة داخل المحفظة:",
+ [["Collateral ligaments","الأربطة الجانبية"],["Annular ligaments","الأربطة الحلقية"],["Sacrotuberous ligament","الرباط العجزي الحدبي"],["Cruciate ligaments","الأربطة الصليبية"]],3,"الأربطة الصليبية."],
+
+["Menisci differ from articular discs in that they divide the joint cavity:","تختلف الغضاريف الهلالية عن الأقراص في أنها تقسم التجويف:",
+ [["Partially","جزئياً"],["Completely","كلياً"],["Not at all","لا تقسمه"],["Into three parts","إلى ثلاثة أجزاء"]],0,"جزئياً (والقرص يقسمه كلياً)."],
+
+["Marginal cartilage is found around the:","الغضروف الحافي يوجد حول:",
+ [["Acetabulum","الحُقّ (Acetabulum)"],["Femoral head","رأس الفخذ"],["Patella","الرضفة"],["Radial head","رأس الكعبرة"]],0,"الحُقّ (Acetabulum)."],
+
+["Movement of a bone describing a conical space (e.g., shoulder joint) is:","حركة العظم التي ترسم حيزاً مخروطياً (كالكتف):",
+ [["Rotation","دوران محوري"],["Gliding","انزلاق"],["Circumduction","دوران مخروطي (Circumduction)"],["Flexion","ثني"]],2,"الدوران المخروطي (Circumduction)."],
+
+["Ball and socket joints are:","المفاصل الكروية الحُقّية:",
+ [["Uniaxial","أحادية المحور"],["Biaxial","ثنائية المحور"],["Multiaxial","متعددة المحاور"],["Non-axial","عديمة المحاور"]],2,"متعددة المحاور."],
+
+["The elbow and fetlock are examples of which joint type?","الكوع والـ fetlock مثالان على أي نوع؟",
+ [["Ball and socket","كرة وكأس"],["Hinge","مفصلي (Hinge)"],["Saddle","سرجي"],["Plane","مسطح"]],1,"مفصل مفصلي (Hinge)."],
+
+["The atlanto-axial joint is an example of which joint type?","المفصل الأطلسي المحوري مثال على:",
+ [["Pivot","محوري (Pivot)"],["Hinge","مفصلي"],["Ellipsoid","إهليجي"],["Saddle","سرجي"]],0,"مفصل محوري (Pivot) للدوران."],
+
+["Myology is the science which describes the:","علم الـ Myology يصف:",
+ [["Bones and joints","العظام والمفاصل"],["Muscles and accessory structures (fascia, tendon sheath and bursa)","العضلات وملحقاتها (اللفافة، غمد الوتر والجراب)"],["Nerves and blood vessels","الأعصاب والأوعية الدموية"],["Skin and its derivatives","الجلد ومستقاته"]],1,"العضلات وملحقاتها."],
+
+["The ability of a muscle to be passively stretched is called:","قدرة العضلة على الاستطالة السلبية تسمى:",
+ [["Excitability","الاستثارة والتهيج"],["Contractility","القابلية للانقباض"],["Extensibility","القابلية للتمدد والاستطالة"],["Elasticity","المرونة"]],2,"القابلية للتمدد."],
+
+["Which type of muscle moves the viscera and helps in digestion and respiration?","أي نوع عضلات يحرك الأحشاء ويساعد في الهضم والتنفس؟",
+ [["Smooth muscle","العضلات الملساء"],["Cardiac muscle","العضلة القلبية"],["Skeletal muscle","العضلات الهيكلية"],["Striated muscle","العضلات المخططة"]],0,"العضلات الملساء."],
+
+["Intercalated discs are characteristic of:","الأقراص البينية مميزة لـ:",
+ [["Smooth muscle","العضلات الملساء"],["Skeletal muscle","العضلات الهيكلية"],["Cardiac muscle","العضلة القلبية"],["All muscle types","جميع أنواع العضلات"]],2,"العضلة القلبية."],
+
+["Skeletal muscles form about what percentage of the body weight?","تشكل العضلات الهيكلية حوالي أي نسبة من وزن الجسم؟",
+ [["10-15%","10-15%"],["20-25%","20-25%"],["60-65%","60-65%"],["40-45%","40-45%"]],3,"40–45%."],
+
+["Each skeletal muscle fiber is:","كل ليفة عضلية هيكلية:",
+ [["Uninucleated","أحادية النواة"],["Multinucleated","عديدة الأنوية"],["Branched","متفرعة"],["Spindle-shaped","مغزلية الشكل"]],1,"عديدة الأنوية."],
+
+["The contractile proteins (actin and myosin) are arranged in repeating units called:","تترتب بروتينات الانقباض في وحدات متكررة تسمى:",
+ [["Myofibrils","اللييفات العضلية"],["Fascicles","الحزم العضلية"],["Sarcomeres","القسيمات العضلية (Sarcomeres)"],["Myofibers","الألياف العضلية"]],2,"القسيمات العضلية (Sarcomeres)."],
+
+["The connective tissue that ensheathes each muscle bundle (fascicle) is the:","النسيج الضام المحيط بكل حزمة عضلية:",
+ [["Epimysium","غلاف العضلة (Epimysium)"],["Endomysium","غلاف الليفة (Endomysium)"],["Perimysium","غلاف الحزمة (Perimysium)"],["Intermuscular septum","الحاجز بين العضلات"]],2,"Perimysium."],
+
+["The origin of a skeletal muscle is usually:","منشأ العضلة الهيكلية عادة:",
+ [["The distal, more movable attachment","الارتباط البعيد الأكثر حركة"],["The proximal, less movable attachment","الارتباط القريب الأقل حركة"],["The main bulk of the muscle","كتلة العضلة الرئيسية"],["The intermediate tendon","الوتر الوسطي"]],1,"الارتباط القريب الأقل حركة."],
+
+["Which muscle has no origin and no insertion?","أي عضلة ليس لها منشأ ولا انغراز؟",
+ [["Biceps brachii","ثنائية الرأس العضدية"],["Deltoid","الدالية"],["Orbicularis oris","الدائرية الشفوية (حول الفم)"],["Rectus femoris","المستقيمة الفخذية"]],2,"العضلة الدائرية للفم."],
+
+["A tendon is formed by the fusion of:","يتكون الوتر من اندماج:",
+ [["The epimysium and the fascia","غلاف العضلة واللفافة"],["The peri- and endomysial sheaths","أغلفة الـ peri والـ endomysium"],["The superficial and deep fascia","اللفافة السطحية والعميقة"],["The synovial layers","الطبقات الزلالية"]],1,"أغلفة الـ peri وendomysium."],
+
+["The linea alba is an example of a:","الخط الأبيض مثال على:",
+ [["Tendon","وتر"],["Aponeurosis","صفاق (Aponeurosis)"],["Retinaculum","رباط حلقي"],["Raphe","رفاء"]],1,"صفاق (Aponeurosis)."],
+
+["Parallel arrangement of muscle fibers gives the muscle:","ترتيب الألياف المتوازي يعطي العضلة:",
+ [["The maximal degree of contraction and greater movement","أقصى درجة انقباض وحركة أكبر"],["The greatest power","القوة الأكبر"],["No ability to contract","عدم القدرة على الانقباض"],["Fibers on one side of a tendon","ألياف على جانب واحد من الوتر"]],0,"أقصى انقباض وحركة أكبر."],
+
+["Pennate muscles are more powerful than parallel-fibered muscles because they:","العضلات الريشية أقوى لأنها:",
+ [["Have fewer fibers","تحوي أليافاً أقل"],["Have more fibers","تحوي أليافاً أكثر"],["Have no tendon","ليس لها وتر"],["Are circular","دائرية الشكل"]],1,"تحوي ألياف أكثر."],
+
+["The rectus femoris is an example of which type of muscle?","المستقيمة الفخذية مثال على عضلة:",
+ [["Unipennate","أحادية الريشة"],["Multipennate","متعددة الريش"],["Bipennate","ثنائية الريشة"],["Convergent","متقاربة"]],2,"ثنائية الريش."],
+
+["The deltoid muscle is an example of a:","العضلة الدالية مثال على:",
+ [["Unipennate muscle","عضلة أحادية الريشة"],["Multipennate muscle","عضلة متعددة الريش"],["Circular muscle","عضلة دائرية"],["Digastric muscle","عضلة ثنائية البطن"]],1,"متعددة الريش."],
+
+["A muscle with a broad origin and a pointed insertion, such as the pectoralis major, is called:","عضلة ذات منشأ عريض وانغراز مدبب كالصدرية الكبرى:",
+ [["Convergent","متقاربة (Convergent)"],["Circular","دائرية"],["Fusiform","مغزلية"],["Strap","شريطية"]],0,"متقاربة (Convergent)."],
+
+["A muscle with two bellies connected by an intermediate tendon is:","عضلة ببطنين يربطهما وتر وسطي:",
+ [["Bicipital","ثنائية الرأس"],["Digastric","ثنائية البطن (Digastric)"],["Unicipital","أحادية الرأس"],["Quadricipital","رباعية الرأس"]],1,"ثنائية البطن (Digastric)."],
+
+["Which of the following is a characteristic of red muscles?","أي مما يلي من صفات العضلات الحمراء؟",
+ [["No myoglobin and less vasculature","لا ميوجلوبين وأوعيتها أقل"],["Contract strongly but fatigue quickly","تنقبض بقوة وتتعب بسرعة"],["Quick response to stimuli","استجابة سريعة للمنبهات"],["Myoglobin pigment, slow contraction and sustained contractions","تحوي صبغة الميوجلوبين، وانقباضها بطيء ومستمر"]],3,"ميوجلوبين وانقباض بطيء مستمر."],
+
+["A muscle that decreases the angle between the articulating skeletal segments is a(n):","عضلةتقلل الزاوية بين القطعتين العظميتين:",
+ [["Extensor","باسطة"],["Flexor","ثانية (Flexor)"],["Abductor","مبعدة"],["Adductor","مقربة"]],1,"ثانية (Flexor)."],
+
+["An articular muscle (e.g. articularis coxae) is attached to the:","العضلة المفصلية ترتبط بـ:",
+ [["Skin","الجلد"],["Deep fascia","اللفافة العميقة"],["Joint capsule","محفظة المفصل"],["Intermediate tendon","الوتر الوسطي"]],2,"محفظة المفصل."],
+
+["A motor unit consists of:","الوحدة الحركية تتكون من:",
+ [["A sensory neuron and a muscle spindle","عصبون حسي ومغزل عضلي"],["A motor neuron in the ventral gray horn and all the muscle fibers it supplies","عصبون حركي في القرن الرمادي البطني وكل الألياف التي يغذيها"],["A muscle fascicle and its blood vessels","حزمة عضلية وأوعيتها الدموية"],["A tendon and its synovial sheath","وتر وغقده الزلالي"]],1,"عصبون حركي وكل الألياف التي يغذيها."],
+
+["Blood vessels enter a skeletal muscle at the:","تدخل الأوعية الدموية العضلة عند:",
+ [["Origin","المنشأ"],["Insertion","الانغراز"],["Tendon","الوتر"],["Neurovascular hilum","السرة العصبية الوعائية"]],3,"السرة العصبية الوعائية."],
+
+["Which of the following is an acquired bursa?","أي مما يلي جراب مكتسب؟",
+ [["Subcutaneous bursa","الجراب تحت الجلد"],["Subtendinous bursa","الجراب تحت الوتر"],["Subligamentous bursa","الجراب تحت الرباط"],["Bicipital bursa","الجراب ذو الرأسين"]],0,"الجراب تحت الجلد."],
+
+["The retinaculae (annular ligaments) are:","الأربطة الحلقية (Retinaculae) هي:",
+ [["Round cords of collagen at muscle ends","حبال كولاجين مستديرة"],["Flat sheets that attach flattened muscles","صفائح مسطحة تثبت العضلات"],["Long tubular bursae around tendons","أجراب أنبوبية حول الأوتار"],["Transverse bands of deep fascia that hold tendons and their sheaths in position","أشرطة عرضية من اللفافة العميقة تثبت الأوتار وأغمدتها"]],3,"أشرطة من اللفافة العميقة تثبت الأوتار."],
+
+["Which of the following muscles is both voluntary and involuntary?","أي عضلة إرادية ولا إرادية معاً؟",
+ [["Biceps brachii","ثنائية الرأس العضدية"],["Diaphragm","الحجاب الحاجز"],["Myocardium","عضلة القلب"],["Pyloric sphincter","المصرة البوابية"]],1,"الحجاب الحاجز."],
+
+["Which layer of the epidermis is the outermost and contains keratin?","أي طبقة بالبشرة هي الأكثر خارجية وتحوي الكيراتين؟",
+ [["Stratum basale","الطبقة القاعدة"],["Stratum granulosum","الطبقة الحبيبية"],["Stratum lucidum","الطبقة الشفافة"],["Stratum corneum","الطبقة القرنية (الخارجية)"]],3,"الطبقة القرنية."],
+
+["A bluish colour of naked, non-pigmented skin indicates:","اللون المزرق للجلد العاري غير المصبوغ يدل على:",
+ [["Cyanosis (oxygen lack)","الزرقة (نقص الأكسجين)"],["Icterus (jaundice)","اليرقان"],["Anemia","فقر الدم"],["Shock","الصدمة"]],0,"الزرقة (نقص الأكسجين)."],
+
+["Which hair type is the fine, wavy \"undercoat\"?","أي نوع شعر هو الطبقة التحتية الناعمة المتموجة؟",
+ [["Guard hairs","الشعر الحارس"],["Tactile hairs","الشعر اللمسي"],["Wool hairs","شعر الصوف (Undercoat)"],["Sinus hairs","الشعر الجيبي"]],2,"شعر الصوف (Wool hairs)."],
+
+["Which animal has rudimentary metacarpal (metatarsal) pads called ergots and vestigial carpal (tarsal) pads called chestnuts?","أي حيوان له وسائد مشطية أثرية (ergots) ووسائد رسغية أثرية (chestnuts)؟",
+ [["Cow","البقرة"],["Horse","الحصان"],["Pig","الخنزير"],["Sheep","الخروف"]],1,"الحصان."],
+
+["The sebum of sheep fleece is collected and processed into:","يُجمع دهن صوف الأغنام ويحوّل إلى:",
+ [["Keratin","الكيراتين"],["Smegma","السميغما"],["Pheromone","الفيرومون"],["Lanolin","اللانولين"]],3,"اللانولين."],
+
+["Which gland is found in the dorsal diverticulum of the boar's prepuce and produces the characteristic boar odor?","أي غدة في الجيب الظهري لقلفة الخنزير الذكر وتنتج رائحته المميزة؟",
+ [["Preputial gland","الغدة القلفية"],["Circumanal gland","الغدة حول الشرج"],["Tail gland","غدة الذيل"],["Horn gland","غدة القرن"]],0,"الغدة القلفية."],
+
+["How many teats does the cow have, and what is the number of teat openings per teat?","كم عدد حلمات البقرة وكم فتحة لكل حلمة؟",
+ [["2 teats, 1 opening","حلمتان، فتحة واحدة"],["4 teats, 1 opening","4 حلمات، فتحة واحدة لكل حلمة"],["4 teats, 2 openings","4 حلمات، فتحتان"],["2 teats, 2 openings","حلمتان، فتحتان"]],1,"للبقرة 4 حلمات، ولكل حلمة فتحة واحدة (قناة حلمية واحدة)."]
+];
+
 const TF=[
 ["Histology is the study of gross anatomy using the scalpel and the naked eye","علم الأنسجة هو دراسة التشريح العياني باستخدام المشرط والعين المجردة",0,"التصحيح: علم الأنسجة (Histology) يدرس التراكيب بالمجهر (microscopic anatomy)، أما التشريح العياني (Gross anatomy) فيُدرس بالمشرط والعين المجردة."],
+
 ["The terms cranial and caudal are used proximal to the carpus and tarsus","يُستخدم مصطلحا cranial وcaudal فوق (قريباً من) الرسغ والكاحل",1,"صح: فوق carpus وtarsus نستخدم cranial/caudal، وتحتهما dorsal وpalmar/plantar."],
+
 ["The horse has two digits that touch the ground","للحصان أصبعان يلامسان الأرض",0,"التصحيح: للحصان أصبع واحد فقط (الثالث) يلامس الأرض (monodactyl)، والأصبعان 3 و4 للمجترات."],
+
 ["The skeleton includes only bones and does not include cartilages","الهيكل يشمل العظام فقط ولا يشمل الغضاريف",0,"التصحيح: الهيكل يتكون من العظام والغضاريف معاً (bones and cartilages)."],
+
 ["The exoskeleton originates from the ectoderm","الهيكل الخارجي ينشأ من الأديم الظاهر (ectoderm)",1,"صح: مثل الحوافر والقرون، وكلها تنشأ من الأديم الظاهر."],
+
 ["The axial skeleton includes the bones of the thoracic and pelvic limbs","الهيكل المحوري يشمل عظام الطرفين الصدري والحوضي",0,"التصحيح: الهيكل المحوري = الجمجمة والعمود الفقري والأضلاع والقص، أما عظام الطرفين فهي الهيكل الطرفي (appendicular skeleton)."],
+
 ["The os penis of the dog is an example of the splanchnic (visceral) skeleton","عظمة القضيب في الكلب مثال على الهيكل الحشوي",1,"صح: عظام تتكون داخل الأحشاء مثل os penis وos cordis."],
-["The membranous skeleton is the strongest type of skeleton","الهيكل الغشائي هو أقوى أنواع الهياكل",0,"التصحيح: الهيكل الغشائي (membranous) هو الأضعف والأبسط، والهيكل العظمي (bony) هو الأقوى."]];
-const CMP=[
-["Applied (clinical) anatomy is the study of the anatomy of the _____ animal to be able to examine different organs.","التشريح التطبيقي (الإكلينيكي) هو دراسة تشريح الحيوان _____ لتمكين فحص الأعضاء المختلفة.",["Living","Dead","Embalmed"],0,"الحي (Living): لأنه يُستخدم في الفحص الإكلينيكي على الحيوان الحي."],
-["The transverse plane of the limb is vertical on the limb's long axis and divides the limb into _____ segments.","المستوى المستعرض للطرف عمودي على محوره الطويل ويقسمه إلى جزأين _____.",["Proximal and distal","Cranial and caudal","Right and left"],0,"قريب وبعيد (Proximal and distal)، لأنه يقطع الطرف عرضياً."],
-["The term for toward the central line of the body or any body part is _____, while the term for away from it is abaxial.","مصطلح الاتجاه نحو الخط المركزي للجسم أو لأي جزء منه هو _____، وبعيداً عنه abaxial.",["Axial","Medial","Rostral"],0,"Axial = ناحية المحور، وعكسه Abaxial."],
-["The periosteum consists of two layers: an outer fibrous layer and an inner _____ layer.","السمحاق يتكون من طبقتين: خارجية ليفية وداخلية _____.",["Bone-forming (osteogenic)","Elastic","Muscular"],0,"الطبقة الداخلية مولّدة للعظم (Osteogenic)، وهي المسؤولة عن نمو العظم وإصلاحه."],
-["The word 'desmos' means fibrous, so _____ is a fibrous joint.","كلمة 'desmos' تعني ليفي، لذلك فإن _____ مفصل ليفي.",["Syndesmosis","Symphysis","Synchondrosis"],0,"Syndesmosis = مفصل ليفي؛ أما Symphysis وSynchondrosis فمفاصل غضروفية."]];
-MCQ.push(
-["The exoskeleton originates from which embryonic layer?","الهيكل الخارجي ينشأ من أي طبقة جنينية؟",["Mesoderm","Endoderm","Neural crest","Ectoderm"],3,"الأديم الظاهر (Ectoderm): ينتج الحوافر والقرون."],
-["Which of the following is an example of an exoskeleton?","أي مما يلي مثال على الهيكل الخارجي؟",["Scapula","Femur","Ribs","Hoofs of animals"],3,"حوافر الحيوانات؛ باقي الخيارات عظام داخلية."],
-["The scapula, femur, humerus and ribs of higher vertebrates are examples of:","اللوح والفخذ والعضد والأضلاع في الفقاريات العليا أمثلة على:",["Exoskeleton","Endoskeleton","Splanchnic skeleton","Membranous skeleton"],1,"الهيكل الداخلي (Endoskeleton): داخل الجسم ومن الميزودرم."],
-["The axial skeleton comprises:","الهيكل المحوري يشمل:",["The skull, vertebral column, ribs and sternum","The bones of the thoracic and pelvic limbs","The os penis and os cordis","The skull and limb bones"],0,"الجمجمة والعمود الفقري والأضلاع والقص."],
-["The appendicular skeleton includes:","الهيكل الطرفي يشمل:",["The skull and sternum","The vertebral column and ribs","Bones developed in viscera","The bones of the thoracic and pelvic limbs"],3,"عظام الطرفين الصدري والحوضي."],
-["The os cordis is found in the heart of:","عظمة القلب (os cordis) توجد في قلب:",["Dog","Camel","Ruminants","Horse"],2,"المجترات (كالبقر)."],
-["The ossa diaphragmatica are found in the diaphragm of the:","العظيمات الحجابية توجد في حجاب:",["Camel","Dog","Cow","Horse"],0,"الجمل."],
-["In the phylogenic classification, the skeleton of cartilaginous fishes is the:","في التصنيف التطوري، هيكل الأسماك الغضروفية هو:",["Membranous skeleton","Cartilaginous skeleton","Bony skeleton","Exoskeleton"],1,"الهيكل الغضروفي."],
-["Which of the following is NOT a function of bones?","أي مما يلي ليس من وظائف العظام؟",["Storage of minerals","Blood cell formation","Leverage (force of motion)","Digestion of food"],3,"الهضم ليس وظيفة عظمية."],
-["Blood cell formation takes place in the:","تكوين خلايا الدم يحدث في:",["Yellow marrow","Gelatinous marrow","Red marrow","Periosteum"],2,"النخاع الأحمر؛ الأصفر دهني والهلامي متحلل."],
-["Axial bones are classified according to their situation as:","تُصنَّف العظام المحورية حسب موقعها إلى:",["Paired bones away from the median plane","Bones within the soft tissues","Bones of the limbs","Unpaired bones present in the median plane"],3,"عظام فردية في المستوى الناصف."],
-["Endochondral bones develop from:","العظام الغضروفية المنشأ تتكون من:",["Fibrous membranes","Hyaline cartilage","Elastic cartilage","The periosteum"],1,"الغضروف الزجاجي؛ الأغشية الليفية للعظام الغشائية."],
-["Which of the following develops as an intramembranous bone?","أي مما يلي يتكون كعظم غشائي المنشأ؟",["Femur","Humerus","Phalanges","Some bones of the skull"],3,"بعض عظام الجمجمة."],
-["The shaft of a long tubular bone is called the:","جسم العظم الأنبوبي الطويل يسمى:",["Epiphysis","Metaphysis","Diaphysis","Physis"],2,"Diaphysis؛ الأطراف Epiphysis."],
-["The epiphysial plate (growth plate) is located in the:","صفيحة النمو توجد في:",["Diaphysis","Metaphysis","Epiphysis","Periosteum"],1,"الـ Metaphysis بين الجسم والنهاية."],
-["Which of the following is a reduced long tubular bone of the horse?","أي مما يلي عظم أنبوبي طويل مختزل في الحصان؟",["Femur","Humerus","Phalanx","Fibula"],3,"الشظية (Fibula)."],
-["Which bones diffuse and reduce concussion?","أي العظام توزع وتخفف الصدمات؟",["Flat bones","Short bones","Irregular bones","Pneumatic bones"],1,"العظام القصيرة."],
-["The largest sesamoid bone is the:","أكبر عظم سمسمي هو:",["Navicular bone","Proximal sesamoid bone","Coffin bone","Patella"],3,"الرضفة (Patella)."],
-["Pneumatic bones contain:","العظام الهوائية تحتوي على:",["Red marrow","Yellow marrow","Air spaces (sinuses) instead of marrow","Gelatinous marrow"],2,"جيوب هوائية بدل النخاع."],
-["The small amount of spongy bone between the two compact layers of the flat bones of the skull cranium is termed:","كمية العظم الإسفنجي بين طبقتي المصمت في عظام الجمجمة المسطحة تسمى:",["Trabeculae","Diploe","Cortex","Endosteum"],1,"الـ Diploe."],
-["The periosteum is attached to the bone by connective tissue fibers called:","يرتبط السمحاق بالعظم بألياف تسمى:",["Haversian fibers","Collagen fibers","Sharpey's fibers","Elastic fibers"],2,"ألياف شاربي."],
-["Which artery enters a long bone at the nutrient foramen and ramifies in the marrow?","أي شريان يدخل العظم الطويل عند الثقبة المغذية ويتفرع في النخاع؟",["Periosteal artery","Epiphysial artery","Metaphysial artery","Nutrient (medullary) artery"],3,"الشريان المغذي (النخاعي)."]);
-TF.push(
+
+["The membranous skeleton is the strongest type of skeleton","الهيكل الغشائي هو أقوى أنواع الهياكل",0,"التصحيح: الهيكل الغشائي (membranous) هو الأضعف والأبسط، والهيكل العظمي (bony) هو الأقوى."],
+
 ["Endochondral bones develop from fibrous membranes","العظام الغضروفية المنشأ تتكون من أغشية ليفية",0,"التصحيح: العظام الغضروفية المنشأ تتكون من غضروف زجاجي (hyaline cartilage)، أما العظام الغشائية (intramembranous) فتتكون من أغشية ليفية."],
+
 ["The patella is the largest sesamoid bone","الرضفة أكبر عظم سمسمي",1,"صح."],
+
 ["Pneumatic bones contain bone marrow like other bones","العظام الهوائية تحتوي نخاعاً كباقي العظام",0,"التصحيح: العظام الهوائية تحتوي على جيوب هوائية (air sinuses) بدلاً من النخاع."],
+
 ["Bones of young animals contain more ossein, so they are pliable and their fractures are rare","عظام الصغار فيها أوسين أكثر فهي مرنة وكسورها نادرة",1,"صح: الأوسين العضوي يمنحها مرونة."],
+
 ["Fibrous joints have a joint cavity","المفاصل الليفية لها تجويف مفصلي",0,"التصحيح: المفاصل الليفية ليس لها تجويف مفصلي؛ التجويف خاص بالمفاصل الزلالية (synovial joints)."],
+
 ["Synovial joints are freely movable joints","المفاصل الزلالية مفاصل حرة الحركة",1,"صح."],
+
 ["Gomphosis is considered a true joint because teeth are parts of the skeleton","مفصل الغرز يعتبر مفصلاً حقيقياً لأن الأسنان جزء من الهيكل",0,"التصحيح: الـ Gomphosis لا يُعد مفصلاً حقيقياً (not a true joint)، فهو غرز السن في الحويصلة بالغشاء حول السني."],
+
 ["Articular cartilage is covered by periosteum and synovial membrane","الغضروف المفصلي مغطى بالسمحاق والغشاء الزلالي",0,"التصحيح: الغضروف المفصلي غير مغطى بالسمحاق ولا بالغشاء الزلالي؛ سطحه حر داخل التجويف المفصلي."],
+
 ["The synovial membrane is richly supplied by blood vessels and nerves","الغشاء الزلالي غني بالأوعية والأعصاب",1,"صح."],
+
 ["Ligaments are highly elastic structures","الأربطة تراكيب عالية المرونة",0,"التصحيح: الأربطة غير مرنة (inelastic) وقوية من ألياف كولاجين، والاستثناء الرباط الرقبي (nuchal ligament) المرن."],
+
 ["Hyaline cartilaginous joints are transformed into bony joints before adult life","المفاصل الغضروفية الزجاجية تتحول إلى عظمية قبل البلوغ",1,"صح: مؤقتة."],
+
 ["Fibrocartilaginous joints (symphysis) ossify with age","المفاصل الليفية الغضروفية (الارتفاق) تتعظم مع العمر",0,"التصحيح: الارتفاق (symphysis) لا يتعظم أبداً (never ossifies)، وحركته محدودة جداً."],
+
 ["Menisci divide the joint cavity partially into two parts","الغضاريف الهلالية تقسم التجويف جزئياً إلى جزأين",1,"صح."],
-["Marginal cartilage enlarges the joint cavity and prevents fracture of the margin","الغضروف الحافي يوسع التجويف ويمنع كسر الحافة",1,"صح."]);
-MCQ.push(
-["The inorganic matter represents what percentage of the solid materials of bone?","المادة غير العضوية تمثل أي نسبة من المواد الصلبة للعظم؟",["35%","5%","65%","95%"],2,"حوالي 65% (والعضوية 35%)."],
-["Arthrology is the science that deals with the study of:","علم الـ Arthrology يختص بدراسة:",["Muscles","Joints","Nerves","Blood vessels"],1,"المفاصل."],
-["Syndesmology is the study of:","علم الـ Syndesmology هو دراسة:",["Ligaments and the joints they help form","Bone growth","Teeth","Cartilage cells only"],0,"الأربطة والمفاصل التي تشارك في تكوينها."],
-["Which joint is classified as cochlear (uniaxial, flexion and extension)?","أي مفصل يُصنف كمفصل حلزوني (محور واحد: ثني وبسط)؟",["Shoulder","Radio-carpal","Tibio-tarsal","Atlanto-axial"],2,"المفصل الظنبوبي الكاحلي (Tibio-tarsal)."],
-["Synosteosis means a:","كلمة Synosteosis تعني مفصلاً:",["Fibrous joint","Bony joint","Cartilaginous joint","Synovial joint"],1,"عظمياً (تحول المفصل إلى عظم)."],
-["Synsarcosis is the connection between the shoulder girdle and the head, neck and trunk by:","الـ Synsarcosis هو ارتباط الحزام الكتفي بالرأس والرقبة والجذع عن طريق:",["Ligaments","Cartilage","Muscles","Bone"],2,"العضلات."],
-["The metacarpophalangeal joint of the horse is commonly called the:","المفصل المشطي السلامي في الحصان يسمى شائعاً:",["Fetlock","Pastern","Coffin","Elbow"],0,"الـ Fetlock (عقب الحافر)."],
-["The distal interphalangeal joint of the horse is commonly called the:","المفصل السلامي البعيد في الحصان يسمى شائعاً:",["Fetlock","Pastern","Coffin","Knuckle"],2,"الـ Coffin joint."],
-["The femoro-tibial joint is an example of which type of synovial joint?","المفصل الفخذي الظنبوبي مثال على أي نوع من المفاصل الزلالية؟",["Hinge","Condyloid","Pivot","Plane"],1,"مفصل لقمي (Condyloid) وهو عدم تطابق يحتاج غضاريف هلالية."],
-["The uniting medium of fibrous joints is:","الوسط الرابط في المفاصل الليفية هو:",["Hyaline cartilage","Fibrocartilage","Fibrous connective tissue","Joint capsule"],2,"نسيج ضام ليفي."],
-["Sutures are found mostly in the:","الدروز توجد غالباً في:",["Limbs","Vertebral column","Thorax","Skull"],3,"الجمجمة."],
-["The interfrontal suture is an example of which suture type?","الدرز بين الجبهيتين نوعه:",["Serrated","Squamous","Plane","Foliate"],0,"مسنن (Serrated)."],
-["The suture between the temporal and parietal bones is:","الدرز بين الصدغية والجدارية:",["Serrated","Squamous","Plane","Foliate"],1,"حرشفي (Squamous)."],
-["The internasal suture is of which type?","الدرز بين الأنفيتين نوعه:",["Serrated","Squamous","Plane","Foliate"],2,"مستوٍ (Plane)."],
-["The suture between the presphenoid wing and the frontal bone is:","الدرز بين جناح الوتدي الأمامي والجبهية:",["Serrated","Squamous","Plane","Foliate"],3,"ورقي (Foliate)."],
-["An example of syndesmosis is the joint between:","مثال على الـ Syndesmosis هو المفصل بين:",["Radius and ulna","Femur and tibia","Scapula and humerus","Two vertebral bodies"],0,"الكعبرة والزند بنسيج ليفي."],
-["Gomphosis is the implantation of teeth into alveoli by:","الـ Gomphosis هو غرز الأسنان في الحويصلات بواسطة:",["Hyaline cartilage","Periodontal membrane","Synovial membrane","Interosseous membrane"],1,"الغشاء حول السني."],
-["Hyaline cartilaginous joints are also called:","المفاصل الغضروفية الزجاجية تسمى أيضاً:",["Symphysis","Syndesmosis","Synchondrosis (primary cartilaginous)","Gomphosis"],2,"Synchondrosis (غضروفية أولية)."],
-["The uniting medium of a symphysis is:","الوسط الرابط في الـ Symphysis:",["Hyaline cartilage","Fibrous tissue","Bone","Fibrocartilage"],3,"الغضروف الليفي."],
-["Which of the following is an example of a synchondrosis?","أي مما يلي مثال على Synchondrosis؟",["Pelvic symphysis","Epiphyseal plate","Intervertebral disc","Mandibular symphysis"],1,"صفيحة النمو."],
-["Which of the following is a symphysis?","أي مما يلي Symphysis؟",["Costochondral junction","Epiphyseal plate","Pelvic symphysis","Suture of the skull"],2,"ارتفاق الحوض."],
-["Articular cartilage is:","الغضروف المفصلي:",["Highly vascular","Supplied by nerves","Covered by periosteum","Avascular with no nerve supply"],3,"عديم الأوعية والأعصاب."],
-["The main source of nutrition for articular cartilage is:","المصدر الرئيسي لتغذية الغضروف المفصلي:",["Synovial fluid","Periosteum","Nutrient artery","Joint capsule"],0,"السائل الزلالي."],
-["On a convex articular surface, the articular cartilage is thickest:","على السطح المفصلي المحدب يكون الغضروف أسمك:",["At the periphery","At the centre","Uniformly","At the synovial fossa"],1,"في المركز (وفي المقعر عند الحافة)."],
-["The fibrous layer of the joint capsule is made of:","الطبقة الليفية لمحفظة المفصل مكونة من:",["Epithelial cells","Collagen fibers with few elastic fibers","Hyaline cartilage","Elastic fibers only"],1,"ألياف كولاجين مع قليل من المرنة."],
-["The synovial membrane is:","الغشاء الزلالي:",["A thick layer of collagen","Thin single epithelial layer lining the joint cavity except at the articular cartilages","Covering the articular cartilage","Devoid of blood vessels"],1,"طبقة طلائية رقيقة تبطن التجويف عدا الغضاريف."],
-["An example of intra-capsular ligaments is:","مثال على الأربطة داخل المحفظة:",["Collateral ligaments","Annular ligaments","Sacrotuberous ligament","Cruciate ligaments"],3,"الأربطة الصليبية."],
-["Menisci differ from articular discs in that they divide the joint cavity:","تختلف الغضاريف الهلالية عن الأقراص في أنها تقسم التجويف:",["Partially","Completely","Not at all","Into three parts"],0,"جزئياً (والقرص يقسمه كلياً)."],
-["Marginal cartilage is found around the:","الغضروف الحافي يوجد حول:",["Acetabulum","Femoral head","Patella","Radial head"],0,"الحُقّ (Acetabulum)."],
-["Movement of a bone describing a conical space (e.g., shoulder joint) is:","حركة العظم التي ترسم حيزاً مخروطياً (كالكتف):",["Rotation","Gliding","Circumduction","Flexion"],2,"الدوران المخروطي (Circumduction)."],
-["Ball and socket joints are:","المفاصل الكروية الحُقّية:",["Uniaxial","Biaxial","Multiaxial","Non-axial"],2,"متعددة المحاور."],
-["The elbow and fetlock are examples of which joint type?","الكوع والـ fetlock مثالان على أي نوع؟",["Ball and socket","Hinge","Saddle","Plane"],1,"مفصل مفصلي (Hinge)."],
-["The atlanto-axial joint is an example of which joint type?","المفصل الأطلسي المحوري مثال على:",["Pivot","Hinge","Ellipsoid","Saddle"],0,"مفصل محوري (Pivot) للدوران."]);
-TF.push(
+
+["Marginal cartilage enlarges the joint cavity and prevents fracture of the margin","الغضروف الحافي يوسع التجويف ويمنع كسر الحافة",1,"صح."],
+
 ["Abduction is movement away from the median plane","التبعيد حركة بعيداً عن المستوى الناصف",1,"صح."],
+
 ["Flexion increases the joint angle","الثني يزيد زاوية المفصل",0,"التصحيح: الثني (flexion) يقلل زاوية المفصل، والبسط (extension) هو الذي يزيدها."],
+
 ["Cruciate ligaments are extra-capsular ligaments","الأربطة الصليبية خارج المحفظة",0,"التصحيح: الأربطة الصليبية داخل المحفظة (intra-capsular) وخارج التجويف الزلالي."],
+
 ["The tone of surrounding muscles affects joint stability","مقوية العضلات المحيطة تؤثر في ثبات المفصل",1,"صح."],
+
 ["Hydrops of the joint is a condition in which pieces of cartilage are present in the joint cavity","استسقاء المفصل حالة وجود قطع غضروف في التجويف",0,"التصحيح: استسقاء المفصل (hydrops) = تجمع زائد للسائل الزلالي، أما وجود قطع غضروف حرة فيسمى joint mice."],
+
 ["Skeletal muscles are involuntary muscles","العضلات الهيكلية لا إرادية",0,"التصحيح: العضلات الهيكلية إرادية (voluntary) ومخططة."],
+
 ["Some muscles, like the diaphragm, can be both voluntary and involuntary","بعض العضلات كالحجاب إرادية ولا إرادية",1,"صح."],
+
 ["Cardiac muscle shows cross striations, and its fibers branch and unite","العضلة القلبية مخططة وأليافها تتفرع وتتحد",1,"صح."],
+
 ["The nuclei of smooth muscle cells are located at the periphery of the cell","أنوية الخلايا العضلية الملساء طرفية",0,"التصحيح: النواة في الخلية العضلية الملساء مركزية (central)، وطرفية (peripheral) في الألياف الهيكلية."],
+
 ["Skeletal muscle fibers usually branch extensively","ألياف العضلات الهيكلية تتفرع كثيراً",0,"التصحيح: الألياف الهيكلية أسطوانية غير متفرعة (unbranched)، والمتفرعة هي ألياف العضلة القلبية."],
+
 ["The insertion is usually the more movable attachment, and the pull is toward the origin","الانغراز هو الارتباط الأكثر حركة والشد نحو المنشأ",1,"صح."],
+
 ["Pennate muscles are less powerful than muscles with parallel fibers","العضلات الريشية أضعف من المتوازية",0,"التصحيح: العضلات الريشية (pennate) أقوى لأن عدد أليافها أكبر، لكن مدى حركتها أقل."],
+
 ["White muscles contain myoglobin pigment and have higher vasculature","العضلات البيضاء تحتوي ميوجلوبين وأوعية أكثر",0,"التصحيح: الميوجلوبين والأوعية الكثيرة صفة العضلات الحمراء (red muscles)؛ أما البيضاء فلا ميوجلوبين فيها وأوعيتها أقل (تنقبض بقوة وتتعب بسرعة)."],
+
 ["Venous channels are squeezed during muscle contraction, so muscles act as peripheral pumps that help venous return","تنضغط الأوردة عند الانقباض فتعمل العضلات كمضخات تساعد العودة الوريدية",1,"صح."],
+
 ["If the nerve pathway to a muscle is cut, the muscle immediately loses its tone, becomes flaccid and atrophies","قطع العصب يفقد العضلة مقوّيتها وترتخي وتضمر",1,"صح."],
+
 ["The dermis, like the epidermis, has no blood vessels or cutaneous nerves","الأدمة كالبشرة بلا أوعية أو أعصاب جلدية",0,"التصحيح: الأدمة (dermis) غنية بالأوعية الدموية والأعصاب الجلدية، أما البشرة (epidermis) فلا أوعية فيها."],
-["In dogs and cats, only the digital and metacarpal (metatarsal) pads touch the ground","في الكلاب والقطط تلامس الأرض الوسائد الإصبعية والمشطية فقط",1,"صح: وسادة الرسغ لا تلامسها."]);
-MCQ.push(
-["Myology is the science which describes the:","علم الـ Myology يصف:",["Bones and joints","Muscles and accessory structures (fascia, tendon sheath and bursa)","Nerves and blood vessels","Skin and its derivatives"],1,"العضلات وملحقاتها."],
-["The ability of a muscle to be passively stretched is called:","قدرة العضلة على الاستطالة السلبية تسمى:",["Excitability","Contractility","Extensibility","Elasticity"],2,"القابلية للتمدد."],
-["Which type of muscle moves the viscera and helps in digestion and respiration?","أي نوع عضلات يحرك الأحشاء ويساعد في الهضم والتنفس؟",["Smooth muscle","Cardiac muscle","Skeletal muscle","Striated muscle"],0,"العضلات الملساء."],
-["Intercalated discs are characteristic of:","الأقراص البينية مميزة لـ:",["Smooth muscle","Skeletal muscle","Cardiac muscle","All muscle types"],2,"العضلة القلبية."],
-["Skeletal muscles form about what percentage of the body weight?","تشكل العضلات الهيكلية حوالي أي نسبة من وزن الجسم؟",["10-15%","20-25%","60-65%","40-45%"],3,"40–45%."],
-["Each skeletal muscle fiber is:","كل ليفة عضلية هيكلية:",["Uninucleated","Multinucleated","Branched","Spindle-shaped"],1,"عديدة الأنوية."],
-["The contractile proteins (actin and myosin) are arranged in repeating units called:","تترتب بروتينات الانقباض في وحدات متكررة تسمى:",["Myofibrils","Fascicles","Sarcomeres","Myofibers"],2,"القسيمات العضلية (Sarcomeres)."],
-["The connective tissue that ensheathes each muscle bundle (fascicle) is the:","النسيج الضام المحيط بكل حزمة عضلية:",["Epimysium","Endomysium","Perimysium","Intermuscular septum"],2,"Perimysium."],
-["The origin of a skeletal muscle is usually:","منشأ العضلة الهيكلية عادة:",["The distal, more movable attachment","The proximal, less movable attachment","The main bulk of the muscle","The intermediate tendon"],1,"الارتباط القريب الأقل حركة."],
-["Which muscle has no origin and no insertion?","أي عضلة ليس لها منشأ ولا انغراز؟",["Biceps brachii","Deltoid","Orbicularis oris","Rectus femoris"],2,"العضلة الدائرية للفم."],
-["A tendon is formed by the fusion of:","يتكون الوتر من اندماج:",["The epimysium and the fascia","The peri- and endomysial sheaths","The superficial and deep fascia","The synovial layers"],1,"أغلفة الـ peri وendomysium."],
-["The linea alba is an example of a:","الخط الأبيض مثال على:",["Tendon","Aponeurosis","Retinaculum","Raphe"],1,"صفاق (Aponeurosis)."],
-["Parallel arrangement of muscle fibers gives the muscle:","ترتيب الألياف المتوازي يعطي العضلة:",["The maximal degree of contraction and greater movement","The greatest power","No ability to contract","Fibers on one side of a tendon"],0,"أقصى انقباض وحركة أكبر."],
-["Pennate muscles are more powerful than parallel-fibered muscles because they:","العضلات الريشية أقوى لأنها:",["Have fewer fibers","Have more fibers","Have no tendon","Are circular"],1,"تحوي ألياف أكثر."],
-["The rectus femoris is an example of which type of muscle?","المستقيمة الفخذية مثال على عضلة:",["Unipennate","Multipennate","Bipennate","Convergent"],2,"ثنائية الريش."],
-["The deltoid muscle is an example of a:","العضلة الدالية مثال على:",["Unipennate muscle","Multipennate muscle","Circular muscle","Digastric muscle"],1,"متعددة الريش."],
-["A muscle with a broad origin and a pointed insertion, such as the pectoralis major, is called:","عضلة ذات منشأ عريض وانغراز مدبب كالصدرية الكبرى:",["Convergent","Circular","Fusiform","Strap"],0,"متقاربة (Convergent)."],
-["A muscle with two bellies connected by an intermediate tendon is:","عضلة ببطنين يربطهما وتر وسطي:",["Bicipital","Digastric","Unicipital","Quadricipital"],1,"ثنائية البطن (Digastric)."],
-["Which of the following is a characteristic of red muscles?","أي مما يلي من صفات العضلات الحمراء؟",["No myoglobin and less vasculature","Contract strongly but fatigue quickly","Quick response to stimuli","Myoglobin pigment, slow contraction and sustained contractions"],3,"ميوجلوبين وانقباض بطيء مستمر."],
-["A muscle that decreases the angle between the articulating skeletal segments is a(n):","عضلة تقلل الزاوية بين القطعتين العظميتين:",["Extensor","Flexor","Abductor","Adductor"],1,"ثانية (Flexor)."],
-["An articular muscle (e.g. articularis coxae) is attached to the:","العضلة المفصلية ترتبط بـ:",["Skin","Deep fascia","Joint capsule","Intermediate tendon"],2,"محفظة المفصل."],
-["A motor unit consists of:","الوحدة الحركية تتكون من:",["A sensory neuron and a muscle spindle","A motor neuron in the ventral gray horn and all the muscle fibers it supplies","A muscle fascicle and its blood vessels","A tendon and its synovial sheath"],1,"عصبون حركي وكل الألياف التي يغذيها."],
-["Blood vessels enter a skeletal muscle at the:","تدخل الأوعية الدموية العضلة عند:",["Origin","Insertion","Tendon","Neurovascular hilum"],3,"السرة العصبية الوعائية."],
-["Which of the following is an acquired bursa?","أي مما يلي جراب مكتسب؟",["Subcutaneous bursa","Subtendinous bursa","Subligamentous bursa","Bicipital bursa"],0,"الجراب تحت الجلد."],
-["The retinaculae (annular ligaments) are:","الأربطة الحلقية (Retinaculae) هي:",["Round cords of collagen at muscle ends","Flat sheets that attach flattened muscles","Long tubular bursae around tendons","Transverse bands of deep fascia that hold tendons and their sheaths in position"],3,"أشرطة من اللفافة العميقة تثبت الأوتار."],
-["Which of the following muscles is both voluntary and involuntary?","أي عضلة إرادية ولا إرادية معاً؟",["Biceps brachii","Diaphragm","Myocardium","Pyloric sphincter"],1,"الحجاب الحاجز."],
-["Which layer of the epidermis is the outermost and contains keratin?","أي طبقة بالبشرة هي الأكثر خارجية وتحوي الكيراتين؟",["Stratum basale","Stratum granulosum","Stratum lucidum","Stratum corneum"],3,"الطبقة القرنية."],
-["A bluish colour of naked, non-pigmented skin indicates:","اللون المزرق للجلد العاري غير المصبوغ يدل على:",["Cyanosis (oxygen lack)","Icterus (jaundice)","Anemia","Shock"],0,"الزرقة (نقص الأكسجين)."],
-["Which hair type is the fine, wavy \"undercoat\"?","أي نوع شعر هو الطبقة التحتية الناعمة المتموجة؟",["Guard hairs","Tactile hairs","Wool hairs","Sinus hairs"],2,"شعر الصوف (Wool hairs)."],
-["Which animal has rudimentary metacarpal (metatarsal) pads called ergots and vestigial carpal (tarsal) pads called chestnuts?","أي حيوان له وسائد مشطية أثرية (ergots) ووسائد رسغية أثرية (chestnuts)؟",["Cow","Horse","Pig","Sheep"],1,"الحصان."],
-["The sebum of sheep fleece is collected and processed into:","يُجمع دهن صوف الأغنام ويحوّل إلى:",["Keratin","Smegma","Pheromone","Lanolin"],3,"اللانولين."],
-["Which gland is found in the dorsal diverticulum of the boar's prepuce and produces the characteristic boar odor?","أي غدة في الجيب الظهري لقلفة الخنزير الذكر وتنتج رائحته المميزة؟",["Preputial gland","Circumanal gland","Tail gland","Horn gland"],0,"الغدة القلفية."],
-["How many teats does the cow have, and what is the number of teat openings per teat?","كم عدد حلمات البقرة وكم فتحة لكل حلمة؟",["2 teats, 1 opening","4 teats, 1 opening","4 teats, 2 openings","2 teats, 2 openings"],1,"للبقرة 4 حلمات، ولكل حلمة فتحة واحدة (قناة حلمية واحدة)."]);
-CMP.push(
-["In long bones, the compact substance is thick at the _____, thins at the extremities, and becomes denser at the joint.","في العظام الطويلة يكون المصمت سميكاً عند _____ ويرق عند الأطراف.",["Middle","Extremities","Periosteum"],0,"المنتصف (جسم العظم)."],
-["A joint is the site where two or more _____ or bony parts of the skeleton meet.","المفصل موضع التقاء جزأين أو أكثر _____ أو عظميين من الهيكل.",["Cartilaginous","Muscular","Nervous"],0,"غضروفية."],
-["Fibrous joints are immovable and temporary, as they _____ with age.","المفاصل الليفية ثابتة ومؤقتة لأنها _____ مع العمر.",["Ossify","Dissolve","Stretch"],0,"تتعظم."],
-["Sutures with teeth-like pointed margins are called _____ sutures.","الدروز ذات الحواف المسننة تسمى دروزاً _____.",["Serrated","Squamous","Plane"],0,"مسننة."],
-["Pelvic and mandibular symphyses are examples of _____ joints.","ارتفاق الحوض والفك السفلي أمثلة على مفاصل _____.",["Fibrocartilaginous","Hyaline","Synovial"],0,"غضروفية ليفية."],
-["Synovial fluid is secreted and absorbed by the _____.","السائل الزلالي يفرزه ويمتصه _____.",["Synovial membrane","Periosteum","Articular cartilage"],0,"الغشاء الزلالي."],
-["Articular surfaces are formed of a thin dense layer of _____.","الأسطح المفصلية تتكون من طبقة رقيقة كثيفة من _____.",["Compact bone","Spongy bone","Elastic cartilage"],0,"العظم المصمت."],
-["The stifle joint is incongruent, so it needs _____.","مفصل الركبة غير متطابق لذلك يحتاج _____.",["Menisci","Sesamoids","Bursae"],0,"غضاريف هلالية."],
-["The hip joint is a _____ joint.","مفصل الورك مفصل _____.",["Ball and socket","Hinge","Pivot"],0,"كروي حُقّي."],
-["Turning the head from side to side is an example of _____ movement.","إدارة الرأس من جانب لآخر مثال على حركة _____.",["Rotation","Flexion","Gliding"],0,"الدوران."],
-["Myology describes the muscles and their accessory structures: fascia, tendon sheath and _____.","الـ Myology يصف العضلات وملحقاتها: اللفافة وغمد الوتر و_____.",["Bursa","Meniscus","Periosteum"],0,"الجراب."],
-["The general characters of muscles are irritability, contractility, extensibility and _____.","الصفات العامة للعضلات: التهيج والانقباض والتمدد و_____.",["Elasticity","Rigidity","Volatility"],0,"المرونة."],
-["Smooth muscles in the walls of viscera are usually arranged into _____ and longitudinal layers.","العضلات الملساء في جدر الأحشاء تترتب في طبقات _____ وطولية.",["Circular","Oblique","Spiral"],0,"دائرية."],
-["The connective tissue that ensheathes the entire muscle is the _____.","النسيج الضام المحيط بالعضلة كلها هو _____.",["Epimysium","Endomysium","Perimysium"],0,"الـ Epimysium (والحزمة perimysium والليفة endomysium)."],
-["The ends of a muscle are attached to bones, cartilage or ligaments by tendons, aponeurosis and _____.","تتصل أطراف العضلة بالعظام أو الغضاريف أو الأربطة بالأوتار والصفاق و_____.",["Raphe","Bursa","Septum"],0,"الرفاء (Raphe)."],
-["When the edges of a synovial sheath meet, the _____ is present, through which blood vessels enter the tendon.","عندما تلتقي حافتا الغمد الزلالي يوجد _____ الذي تدخل منه الأوعية للوتر.",["Mesotendon","Retinaculum","Diploe"],0,"Mesotendon."],
-["The three layers of the skin from superficial to deep are the epidermis, the dermis and the _____.","طبقات الجلد من السطح للعمق: البشرة والأدمة و_____.",["Subcutis (hypodermis)","Stratum corneum","Periosteum"],0,"تحت الجلد."],
-["The secretory units of the udder are the _____.","الوحدات الإفرازية في الضرع هي _____.",["Alveoli","Teat sinuses","Interlobular ducts"],0,"الأسناخ (Alveoli)."]);
+
+["In dogs and cats, only the digital and metacarpal (metatarsal) pads touch the ground","في الكلاب والقطط تلامس الأرض الوسائد الإصبعية والمشطية فقط",1,"صح: وسادة الرسغ لا تلامسها."]
+];
+
+const CMP=[
+["Applied (clinical) anatomy is the study of the anatomy of the _____ animal to be able to examine different organs.","التشريح التطبيقي (الإكلينيكي) هو دراسة تشريح الحيوان _____ لتمكين فحص الأعضاء المختلفة.",
+ [["Living","الحي"],["Dead","الجامد/الميت"],["Embalmed","المحنوث"]],0,"الحي (Living): لأنه يُستخدم في الفحص الإكلينيكي على الحيوان الحي."],
+
+["The transverse plane of the limb is vertical on the limb's long axis and divides the limb into _____ segments.","المستوى المستعرض للطرف عمودي على محوره الطويل ويقسمه إلى جزأين _____.",
+ [["Proximal and distal","قريب وبعيد"],["Cranial and caudal","أمامي وخلفي"],["Right and left","أيمن وأيسر"]],0,"قريب وبعيد (Proximal and distal)، لأنه يقطع الطرف عرضياً."],
+
+["The term for toward the central line of the body or any body part is _____, while the term for away from it is abaxial.","مصطلح الاتجاه نحو الخط المركزي للجسم أو لأي جزء منه هو _____، وبعيداً عنه abaxial.",
+ [["Axial","محوري (Axial)"],["Medial","إنسي (Medial)"],["Rostral","خطمي (Rostral)"]],0,"Axial = ناحية المحور، وعكسه Abaxial."],
+
+["In long bones, the compact substance is thick at the _____, thins at the extremities, and becomes denser at the joint.","في العظام الطويلة يكون المصمت سميكاً عند _____ ويرق عند الأطراف.",
+ [["Middle","المنتصف (جسم العظم)"],["Extremities","الأطراف"],["Periosteum","السمحاق"]],0,"المنتصف (جسم العظم)."],
+
+["The periosteum consists of two layers: an outer fibrous layer and an inner _____ layer.","السمحاق يتكون من طبقتين: خارجية ليفية وداخلية _____.",
+ [["Bone-forming (osteogenic)","مولدة للعظم (Osteogenic)"],["Elastic","مرنة"],["Muscular","عضلية"]],0,"الطبقة الداخلية مولّدة للعظم (Osteogenic)، وهي المسؤولة عن نمو العظم وإصلاحه."],
+
+["A joint is the site where two or more _____ or bony parts of the skeleton meet.","المفصل موضع التقاء جزأين أو أكثر _____ أو عظميين من الهيكل.",
+ [["Cartilaginous","غضروفية"],["Muscular","عضلية"],["Nervous","عصبية"]],0,"غضروفية."],
+
+["The word 'desmos' means fibrous, so _____ is a fibrous joint.","كلمة 'desmos' تعني ليفي، لذلك فإن _____ مفصل ليفي.",
+ [["Syndesmosis","Syndesmosis (مفصل ليفي)"],["Symphysis","Symphysis (ارتفاق)"],["Synchondrosis","Synchondrosis (غضروفي أولى)"]],0,"Syndesmosis = مفصل ليفي؛ أما Symphysis وSynchondrosis فمفاصل غضروفية."],
+
+["Fibrous joints are immovable and temporary, as they _____ with age.","المفاصل الليفية ثابتة ومؤقتة لأنها _____ مع العمر.",
+ [["Ossify","تتعظم"],["Dissolve","تذوب"],["Stretch","تتمدد"]],0,"تتعظم."],
+
+["Sutures with teeth-like pointed margins are called _____ sutures.","الدروز ذات الحواف المسننة تسمى دروزاً _____.",
+ [["Serrated","مسننة (Serrated)"],["Squamous","حرشفية"],["Plane","مستوية"]],0,"مسننة."],
+
+["Pelvic and mandibular symphyses are examples of _____ joints.","ارتفاق الحوض والفك السفلي أمثلة على مفاصل _____.",
+ [["Fibrocartilaginous","غضروفية ليفية (Fibrocartilaginous)"],["Hyaline","زجاجية"],["Synovial","زلالية"]],0,"غضروفية ليفية."],
+
+["Synovial fluid is secreted and absorbed by the _____.","السائل الزلالي يفرزه ويمتصه _____.",
+ [["Synovial membrane","الغشاء الزلالي"],["Periosteum","السمحاق"],["Articular cartilage","الغضروف المفصلي"]],0,"الغشاء الزلالي."],
+
+["Articular surfaces are formed of a thin dense layer of _____.","الأسطح المفصلية تتكون من طبقة رقيقة كثيفة من _____.",
+ [["Compact bone","العظم المصمت"],["Spongy bone","العظم الإسفنجي"],["Elastic cartilage","الغضروف المرن"]],0,"العظم المصمت."],
+
+["The stifle joint is incongruent, so it needs _____.","مفصل الركبة غير متطابق لذلك يحتاج _____.",
+ [["Menisci","غضاريف هلالية (Menisci)"],["Sesamoids","عظام سمسمية"],["Bursae","أجراب"]],0,"غضاريف هلالية."],
+
+["The hip joint is a _____ joint.","مفصل الورك مفصل _____.",
+ [["Ball and socket","كروي حُقّي (Ball and socket)"],["Hinge","مفصلي (Hinge)"],["Pivot","محوري (Pivot)"]],0,"كروي حُقّي."],
+
+["Turning the head from side to side is an example of _____ movement.","إدارة الرأس من جانب لآخر مثال على حركة _____.",
+ [["Rotation","الدوران (Rotation)"],["Flexion","الثني"],["Gliding","الانزلاق"]],0,"الدوران."],
+
+["Myology describes the muscles and their accessory structures: fascia, tendon sheath and _____.","الـ Myology يصف العضلات وملحقاتها: اللفافة وغمد الوتر و_____.",
+ [["Bursa","الجراب (Bursa)"],["Meniscus","الغضروف الهلالي"],["Periosteum","السمحاق"]],0,"الجراب."],
+
+["The general characters of muscles are irritability, contractility, extensibility and _____.","الصفات العامة للعضلات: التهيج والانقباض والتمدد و_____.",
+ [["Elasticity","المرونة (Elasticity)"],["Rigidity","الصلابة"],["Volatility","التطاير"]],0,"المرونة."],
+
+["Smooth muscles in the walls of viscera are usually arranged into _____ and longitudinal layers.","العضلات الملساء في جدر الأحشاء تترتب في طبقات _____ وطولية.",
+ [["Circular","دائرية (Circular)"],["Oblique","مائلة"],["Spiral","حلزونية"]],0,"دائرية."],
+
+["The connective tissue that ensheathes the entire muscle is the _____.","النسيج الضام المحيط بالعضلة كلها هو _____.",
+ [["Epimysium","الـ Epimysium"],["Endomysium","الـ Endomysium"],["Perimysium","الـ Perimysium"]],0,"الـ Epimysium (والحزمة perimysium والليفة endomysium)."],
+
+["The ends of a muscle are attached to bones, cartilage or ligaments by tendons, aponeurosis and _____.","تتصل أطراف العضلة بالعظام أو الغضاريف أو الأربطة بالأوتار والصفاق و_____.",
+ [["Raphe","الرفاء (Raphe)"],["Bursa","الجراب"],["Septum","الحاجز"]],0,"الرفاء (Raphe)."],
+
+["When the edges of a synovial sheath meet, the _____ is present, through which blood vessels enter the tendon.","عندما تلتقي حافتا الغمد الزلالي يوجد _____ الذي تدخل منه الأوعية للوتر.",
+ [["Mesotendon","الـ Mesotendon"],["Retinaculum","الرباط الحلقي"],["Diploe","الدبلوي"]],0,"Mesotendon."],
+
+["The three layers of the skin from superficial to deep are the epidermis, the dermis and the _____.","طبقات الجلد من السطح للعمق: البشرة والأدمة و_____.",
+ [["Subcutis (hypodermis)","تحت الجلد (Subcutis)"],["Stratum corneum","الطبقة القرنية"],["Periosteum","السمحاق"]],0,"تحت الجلد."],
+
+["The secretory units of the udder are the _____.","الوحدات الإفرازية في الضرع هي _____.",
+ [["Alveoli","الأسناخ (Alveoli)"],["Teat sinuses","جيوب الحلمة"],["Interlobular ducts","القنوات بين الفصيصية"]],0,"الأسناخ (Alveoli)."]
+];
+
 const A=document.getElementById('app'),S=document.getElementById('score');let c=0,t=0;
-const upd=()=>S.textContent=`Score: ${c} / ${t} answered`;upd();
-function sec(title,note){const h=document.createElement('h2');h.textContent=title;A.append(h);if(note){const n=document.createElement('div');n.className='note';n.innerHTML=note;A.append(n)}}
-function fin(q,ok,msg,d){q.classList.add('done');q.querySelector('.fb').innerHTML=(ok?'✅ إجابة صحيحة. ':'❌ إجابة خاطئة. ')+msg+d;q.querySelectorAll('input').forEach(x=>x.disabled=true);t++;if(ok)c++;upd()}
-function choice(data,start,id){data.forEach((d,i)=>{const q=document.createElement('div');q.className='q';
-q.innerHTML=`<div class="en">${start+i}. ${d[0]}</div><div class="ar">${d[1]}</div>`+d[2].map((o,j)=>`<label class="o"><input type="radio" name="${id}${i}" value="${j}"> ${'ABCD'[j]}. ${o}</label>`).join('')+'<div class="fb"></div>';
-q.onchange=e=>{if(q.classList.contains('done'))return;const v=+e.target.value,L=q.querySelectorAll('label.o');L[d[3]].classList.add('ok');if(v!==d[3])L[v].classList.add('no');fin(q,v===d[3],v===d[3]?'':`الإجابة الصحيحة: <b dir="ltr">${d[2][d[3]]}</b><br>`,d[4])};A.append(q)})}
-function tf(data,start){data.forEach((d,i)=>{const q=document.createElement('div');q.className='q';
-q.innerHTML=`<div class="en">${start+i}. ${d[0]}</div><div class="ar">${d[1]}</div><div class="tf"><label class="o"><input type="checkbox" value="1"> ✓ True / صح</label><label class="o"><input type="checkbox" value="0"> ✗ False / خطأ</label></div><div class="fb"></div>`;
-q.onchange=e=>{if(q.classList.contains('done'))return;const v=+e.target.value,L=q.querySelectorAll('label.o'),ix=v?0:1;L.forEach((l,k)=>{if(k!==ix)l.querySelector('input').checked=false});
-L[d[2]?0:1].classList.add('ok');if(v!==d[2])L[ix].classList.add('no');fin(q,v===d[2],v===d[2]?'':`الإجابة الصحيحة: <b>${d[2]?'صح (True)':'خطأ (False)'}</b><br>`,d[3])};A.append(q)})}
-sec('Part 1 · Multiple Choice (MCQs)','اختر الإجابة الصحيحة: تظهر الإجابة الصحيحة باللون الأخضر، وإذا اخترت خطأً يظهر اختيارك باللون الأحمر مع تصحيح وشرح.');choice(MCQ,1,'m');
-sec('Part 2 · True / False','ضع علامة في المربع: ✓ True للعبارة الصحيحة أو ✗ False للعبارة الخاطئة.');tf(TF,1);
-sec('Part 3 · Complete (أسئلة أكمل)','<b>هذه أسئلة «أكمل»</b>: كل سؤال له 3 اختيارات، واحد صحيح واثنان خطأ، اختر الصحيح لإكمال الجملة.');choice(CMP,1,'c');
-</script></body></html>
+const upd=()=>S.textContent=`النتيجة: ${c} / ${t} سؤالاً مجاباً`;upd();
+
+function sec(title,note){
+    const h=document.createElement('h2');
+    h.textContent=title;
+    A.append(h);
+    if(note){
+        const n=document.createElement('div');
+        n.className='note';
+        n.innerHTML=note;
+        A.append(n);
+    }
+}
+
+function fin(q,ok,msg,d,correctOptName){
+    q.classList.add('done');
+    q.querySelector('.fb').innerHTML=(ok?'✅ إجابة صحيحة.<br>':'❌ إجابة خاطئة.<br>')+`الإجابة الصحيحة: <b>${correctOptName}</b><br>`+d;
+    q.querySelectorAll('input').forEach(x=>x.disabled=true);
+    t++;if(ok)c++;upd();
+}
+
+function choice(data,start,id){
+    data.forEach((d,i)=>{
+        const q=document.createElement('div');
+        q.className='q';
+        q.innerHTML=`<div class="en">${start+i}. ${d[0]}</div>
+                     <div class="ar">${d[1]}</div>`+
+                     d[2].map((o,j)=>`<label class="o"><input type="radio" name="${id}${i}" value="${j}"> <span class="opt-en">${'ABCD'[j]}. ${o[0]}</span> <div class="opt-ar">(${o[1]})</div></label>`).join('')+
+                     '<div class="fb"></div>';
+        
+        q.onchange=e=>{
+            if(q.classList.contains('done'))return;
+            const v=+e.target.value,L=q.querySelectorAll('label.o');
+            L[d[3]].classList.add('ok');
+            if(v!==d[3])L[v].classList.add('no');
+            const correctText = `${d[2][d[3]][0]} (${d[2][d[3]][1]})`;
+            fin(q,v===d[3],'',d[4],correctText);
+        };
+        A.append(q);
+    });
+}
+
+function tf(data,start){
+    data.forEach((d,i)=>{
+        const q=document.createElement('div');
+        q.className='q';
+        q.innerHTML=`<div class="en">${start+i}. ${d[0]}</div>
+                     <div class="ar">${d[1]}</div>
+                     <div class="tf">
+                        <label class="o"><input type="checkbox" value="1"> ✓ True / صح</label>
+                        <label class="o"><input type="checkbox" value="0"> ✗ False / خطأ</label>
+                     </div>
+                     <div class="fb"></div>`;
+        
+        q.onchange=e=>{
+            if(q.classList.contains('done'))return;
+            const v=+e.target.value,L=q.querySelectorAll('label.o'),ix=v?0:1;
+            L.forEach((l,k)=>{if(k!==ix)l.querySelector('input').checked=false});
+            L[d[2]?0:1].classList.add('ok');
+            if(v!==d[2])L[ix].classList.add('no');
+            const correctText = d[2] ? 'صح (True)' : 'خطأ (False)';
+            fin(q,v===d[2],'',d[3],correctText);
+        };
+        A.append(q);
+    });
+}
+
+sec('Part 1 · Multiple Choice Questions (MCQs)','<b>أسئلة الاختيار من متعدد:</b> اختر الإجابة الصحيحة، ستظهر الإجابة باللون الأخضر وتصحيحها فوراً.');
+choice(MCQ,1,'m');
+
+sec('Part 2 · True / False','<b>أسئلة الصح والخطأ:</b> ضع علامة في المربع: ✓ True للعبارة الصحيحة أو ✗ False للعبارة الخاطئة.');
+tf(TF,1);
+
+sec('Part 3 · Complete (أسئلة أكمل)','<b>أسئلة أكمل:</b> كل سؤال يتضمن 3 خيارات (إجابة واحدة صحيحة واثنتان خاطئتان)، اختر الخيار الصحيح لإكمال الفراغ.');
+choice(CMP,1,'c');
+</script>
+</body>
+</html>
